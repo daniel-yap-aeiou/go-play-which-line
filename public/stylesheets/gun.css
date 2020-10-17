@@ -1,0 +1,57 @@
+div#machine-gun
+{
+	top: -194px;
+	right: 0px;
+}
+
+.range {
+  display: block;
+  width: 100%;
+  position: initial;
+}
+
+.gun {
+  font-size: 80px;
+  /*margin-left: 70%;*/
+  position: relative;
+  display: block;
+  line-height: 2;
+  cursor: pointer
+}
+
+.gun::before {
+  opacity: 0;
+  content: '💥';
+  font-size: 30px;
+  display: inline-block;
+  position: absolute;
+  left: -20%;
+  top: 42px;
+}
+
+.gun:active::before {
+  opacity: 1;
+}
+
+#trigger-a,
+#trigger-b {
+  display: none;
+}
+
+.shot {
+  position: absolute;
+  opacity: 0;
+  left: 75%;
+  top: 52px;
+  font-size: 40px;
+}
+
+.trigger:checked+.range .gun+.shot {
+  opacity: 1;
+  transform: translateX(-10000%);
+  transition: opacity .1s, transform .7s;
+}
+
+.trigger:checked+.range .gun {
+  display: none;
+}
