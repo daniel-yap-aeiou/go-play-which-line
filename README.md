@@ -9,7 +9,7 @@ $ Install sbt
 
 
 <br/>
-eclipse link: eclipse.org/downloads/
+eclipse link: https://eclipse.org/downloads/
 <br/>
 sbt link: https://www.scala-sbt.org/
 <br/>
