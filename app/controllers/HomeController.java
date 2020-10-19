@@ -22,4 +22,7 @@ public class HomeController extends Controller {
     	return ok(views.html.todolist.render());
     }
 
+    public Result bikey() {
+    	return ok(views.html.bikey.render());
+    }
 }
