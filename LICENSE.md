@@ -1,4 +1,4 @@
-Sample java app - <To be completed>.
+Sample java app - <To be completed soon>.
 Copyright (C) 2020 Daniel Yap
 
 This program is free software: you can redistribute it and/or modify
