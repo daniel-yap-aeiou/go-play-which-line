@@ -1,6 +1,9 @@
 # go-play experiment
 
 ![Snapshot](https://github.com/daniel-yap-aeiou/go-play/blob/main/img/Todo%20List%20-%20Google%20Chrome%202020-10-19%2017-39-10.gif)
+<br/>
+![Snapshot](https://github.com/daniel-yap-aeiou/go-play-with-who/blob/main/img/Boarding%20Pass%20-%20Google%20Chrome%202020-10-22%2017-16-04.gif)
+
 
 $ Install Eclipse
 $ Install sbt
