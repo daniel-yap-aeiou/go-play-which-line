@@ -39,4 +39,9 @@ public class HomeController extends Controller {
     public Result bikey() {
     	return ok(views.html.bikey.render());
     }
+    
+    @With(Logging.class)
+    public Result boardingpass() {
+    	return ok(views.html.boardingpass.render());
+    }
 }
