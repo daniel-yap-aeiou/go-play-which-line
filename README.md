@@ -20,7 +20,7 @@ play framework link: https://www.playframework.com/
 <br />
 
 
-$ cd <Project folder>
+$ cd "Project folder"
 <br />
 $ sbt run
 <br />
@@ -30,7 +30,7 @@ open localhost:9000 in your browser.
 
 How to run test:
 <br/>
-$ cd <Project folder>
+$ cd "Project folder"
 <br/>
 $ sbt test
 <br/>
