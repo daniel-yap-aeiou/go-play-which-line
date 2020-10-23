@@ -26,3 +26,11 @@ $ sbt run
 <br />
 open localhost:9000 in your browser.
 <br />
+
+
+How to run test:
+<br/>
+$ cd <Project folder>
+<br/>
+$ sbt test
+<br/>

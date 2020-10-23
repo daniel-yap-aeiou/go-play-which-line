@@ -28,5 +28,34 @@ public class HomeControllerTest extends WithApplication {
         Result result = route(app, request);
         assertEquals(OK, result.status());
     }
+    
+    @Test
+    public void testTodo() {
+        Http.RequestBuilder request = new Http.RequestBuilder()
+                .method(GET)
+                .uri("/todo");
 
+        Result result = route(app, request);
+        assertEquals(OK, result.status());
+    }
+    
+    @Test
+    public void testBikey() {
+        Http.RequestBuilder request = new Http.RequestBuilder()
+                .method(GET)
+                .uri("/bikey");
+
+        Result result = route(app, request);
+        assertEquals(OK, result.status());
+    }
+
+    @Test
+    public void testboardingpass() {
+        Http.RequestBuilder request = new Http.RequestBuilder()
+                .method(GET)
+                .uri("/boardingpass");
+
+        Result result = route(app, request);
+        assertEquals(OK, result.status());
+    }
 }
