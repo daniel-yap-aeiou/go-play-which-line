@@ -1,7 +1,9 @@
 @() @main("Welcome to Play") {
 
+<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("font-awesome/css/font-awesome.min.css")">
 <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/gun.css")">
 <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/robot.css")">
+
 
 <div class="w3-container">
 	<div id="page">
@@ -19,6 +21,7 @@
 				</span> <input id='trigger-b' class='trigger' type='radio' name='fire'
 					checked> <span class='range'> <label class="gun"
 					for='trigger-b'>🔫</label> <output class='shot'>⁌</output>
+					<!-- https://emojipedia.org/ -->
 				</span>
 			</div>
 			<div id="foot" class="left">
@@ -125,6 +128,11 @@
 				</div>
 				<div id="b9"></div>
 			</div>
+		</div>
+		
+		<div id="microphone">
+			<button id="speech" class="btn"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+  			<div class="pulse-ring"></div>
 		</div>
 	</div>
 	}

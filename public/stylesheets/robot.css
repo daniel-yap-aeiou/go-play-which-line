@@ -1,8 +1,8 @@
 body {
 	margin:0;
 	height: 450px;
-	background:#98B8CF;	
-	background-image: -webkit-linear-gradient(left , rgb(84,116,137) 0%, rgb(133,160,177) 50%, rgb(84,116,137) 100%);
+	background:#0abab5;	
+	background-image: -webkit-linear-gradient(left , rgb(3.9, 72.9, 71) 0%, rgb(228,228,228) 50%, rgb(3.9, 72.9, 71) 100%);
 }
 
 #text {
@@ -53,7 +53,7 @@ div {
 	bottom:20%;
 	-webkit-animation:leg1 6s ease-in-out infinite;
 	-moz-animation:leg1 6s ease-in-out infinite;
-	background:#7AA6C1;
+	background:#0abab5;
 	border:1px solid #000;
 	border-radius:5px;
 	z-index:3;
@@ -70,7 +70,7 @@ div {
 #leg2 {
 	height:20px;
 	width:12px;
-	background:#7AA6C1;
+	background:#0abab5;
 	border:1px solid #000;
 	bottom:20%;
 	z-index:3;
@@ -223,7 +223,7 @@ div {
 #body {
 	height:66px;
 	width:56px;
-	background:#A7C6DB;
+	background:#0abab5;
 	left:120px;
 	top:140px;
 	z-index:10;
@@ -239,7 +239,7 @@ div {
 	width: 100%;
 	bottom: 0;
 	z-index: -1;
-	background-color: #A7C6DB;
+	background-color: #0abab5;
 }
 #body:before {
 	-webkit-transform: skew(-5deg);
@@ -299,7 +299,7 @@ div {
 	width:100%;
 	border:1px solid #000;
 	border-bottom:none;
-	background:#A7C6DB;
+	background:#0abab5;
 	border-radius:150px 150px 0 0;
 	z-index:2;
 }
@@ -307,7 +307,7 @@ div {
 	height:10px;
 	width:100%;
 	border:1px solid #000;
-	background:#A7C6DB;
+	background:#0abab5;
 	bottom:0;
 	border-radius:100%;
 	z-index:1;	
@@ -315,7 +315,7 @@ div {
 #b1 {
 	width:102%;
 	height:14px; left:-1px;
-	background-color: #A7C6DB;
+	background-color: #0abab5;
 	border:1px solid #000;
 	bottom:-8px;
 	z-index:-2;
@@ -324,7 +324,7 @@ div {
 #b2 {
 	width:60%; bottom:100%;
 	height:28%; left:20%;
-	background-color: #C8DFED;
+	background-color: #0abab5;
 	z-index:2;
 }
 #b2:before, #b2:after {
@@ -350,7 +350,7 @@ div {
 	border-left:1px solid #000;	
 }
 #b3 {
-	background-color: #C8DFED;
+	background-color: #0abab5;
 	border:1px solid #000;
 	border-radius:100%;
 	width:124%; left:-13%;
@@ -367,7 +367,7 @@ div {
 	width:100%;
 	height:8px;
 	bottom:-4px; left:1px;
-	background:#A7C6DB;
+	background:#0abab5;
 	border:1px solid #000;	
 	border-radius:100%;
 	z-index:0;
@@ -376,7 +376,7 @@ div {
 	width:100%;
 	height:46px; bottom:0;
 	left:1px;
-	background:#A7C6DB;
+	background:#0abab5;
 	border-left:1px solid #000;	
 	border-right:1px solid #000;		
 	z-index:1;
@@ -385,7 +385,7 @@ div {
 	width:100%;
 	height:38px; bottom:62%;
 	left:1px;
-	background:#A7C6DB;
+	background:#0abab5;
 	border:1px solid #000;	
 	border-radius:100%;
 	z-index:0;
@@ -395,14 +395,14 @@ div {
 	width:12px;
 	bottom:56px;
 	border:1px solid #000;
-	background:#C4E0EE;
+	background:#0abab5;
 	z-index:-1;
 	border-radius:100%;
 	left:13px;
 }
 #h5 {
 	bottom:64px;
-	background:#76A3C4;
+	background:#0abab5;
 	border:1px solid #000;
 	width:2px;
 	height:20px;
@@ -432,14 +432,14 @@ div {
 	left:-3px; top:-5px;
 	height:6px;
 	width:6px;
-	background:#CEE9FA;
+	background:#0abab5;
 	border:1px solid #000;
 	border-radius:100%;
 }
 #eyes {
 	width:49px;
 	height:22px;
-	background:#CAE1F1;
+	background:#0abab5;
 	border:1px solid #000;
 	border-radius:10px;
 	z-index:5;
@@ -619,7 +619,7 @@ div {
 #b4 {
 	height:20px;
 	width:10px;
-	background:#AAC6DE;
+	background:#0abab5;
 	border:1px solid #000;
 	border-radius:100%;
 	left:-12px; top:2px;
@@ -632,7 +632,7 @@ div {
 }
 #ab #a1 {
 	right:2px;
-	background:#A7C6DB;
+	background:#0abab5;
 	border:1px solid #000;
 	height:20px;
 	width:8px;
@@ -642,7 +642,7 @@ div {
 }
 #ab #a2 {
 	right:8px;
-	background:#A7C6DB;
+	background:#0abab5;
 	border:1px solid #000;
 	height:20px;
 	width:4px;
@@ -652,7 +652,7 @@ div {
 #ab #a3 {		
 	height:4px;
 	width:14px;
-	background:#A7C6DB;
+	background:#0abab5;
 	border:1px solid #000;	
 	z-index:-1;
 	border-radius:5px;
@@ -663,7 +663,7 @@ div {
 #b6 {
 	height:20px;
 	width:10px;
-	background:#AAC6DE;
+	background:#0abab5;
 	border:1px solid #000;
 	border-radius:100%;
 	right:-12px; top:2px;
@@ -672,7 +672,7 @@ div {
 #b5 {
 	height:10px;
 	width:16px;
-	background:#82A6BC;
+	background:#0abab5;
 	border:1px solid #000;
 	left:-16px; top:8px;
 	z-index:-7;
@@ -683,7 +683,7 @@ div {
 #b51 {
 	height:10px;
 	width:18px;
-	background:#82A6BC;
+	background:#0abab5;
 	border:1px solid #000;
 	border-radius:5px;
 	right:20%; top:-1px;
@@ -799,7 +799,7 @@ div {
 #b7 {
 	height:10px;
 	width:16px;
-	background:#82A6BC;
+	background:#0abab5;
 	border:1px solid #000;
 	right:-16px; top:8px;
 	z-index:-7;
@@ -810,7 +810,7 @@ div {
 #b71 {
 	height:10px;
 	width:18px;
-	background:#82A6BC;
+	background:#0abab5;
 	border:1px solid #000;
 	border-radius:5px;
 	left:20%; top:-1px;
@@ -826,7 +826,7 @@ div {
 }
 #ac #a1 {
 	left:2px;
-	background:#A7C6DB;
+	background:#0abab5;
 	border:1px solid #000;
 	height:20px;
 	width:8px;
@@ -836,7 +836,7 @@ div {
 }
 #ac #a2 {
 	left:8px;
-	background:#A7C6DB;
+	background:#0abab5;
 	border:1px solid #000;
 	height:20px;
 	width:4px;
@@ -846,7 +846,7 @@ div {
 #ac #a3 {		
 	height:4px;
 	width:14px;
-	background:#A7C6DB;
+	background:#0abab5;
 	border:1px solid #000;	
 	z-index:-1;
 	border-radius:5px;
@@ -859,7 +859,7 @@ div {
 	left:10px; top:14px;
 	height:46px;
 	width:36px;
-	background:#A7C6DB;
+	background:#0abab5;
 	z-index:2;
 }
 #b8 span {
@@ -878,7 +878,7 @@ div {
 	width: 100%;
 	bottom: 0;
 	z-index: -1;
-	background:#A7C6DB;
+	background:#0abab5;
 }
 #b8:before {
 	-webkit-transform: skew(-5deg);
@@ -895,3 +895,58 @@ div {
 	border-right:none;
 }
 
+
+/* microphone */
+#microphone {
+	margin-top: 700px;
+	margin-left: 35px;
+	display: flex;
+}
+
+#speech.btn {
+  border: none;
+  padding: 0;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  font-size: 1.5em;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  background: #0abab5;
+  position: relative;
+  display: inline-block;
+  line-height: 50px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+}
+
+.pulse-ring {
+  content: '';
+  width: 150px;
+  height: 150px;
+  border: 5px solid #0abab5;
+  border-radius: 50%;
+  position: absolute;
+  animation: pulsate infinite 2s;
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(1, 1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
+}
