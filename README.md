@@ -34,3 +34,9 @@ $ cd "Project folder"
 <br/>
 $ sbt test
 <br/>
+
+How to isntall cert:
+<br/>
+https://mkyong.com/webservices/jax-ws/suncertpathbuilderexception-unable-to-find-valid-certification-path-to-requested-target/
+<br/>
+https://github.com/escline/InstallCert
