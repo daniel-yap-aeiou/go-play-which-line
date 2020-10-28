@@ -2,6 +2,8 @@ package controllers;
 
 import play.mvc.*;
 import javax.inject.*;
+import play.libs.mailer.Email;
+import play.libs.mailer.MailerClient;
 import services.LogService;
 import logger.Logging;
 
@@ -13,10 +15,15 @@ import logger.Logging;
 public class HomeController extends Controller {
 
 	private final LogService _logService;
+	private final MailerClient _mailerClient;
 	
 	 @Inject
-	 public HomeController(LogService logService) {
+	 public HomeController(LogService logService,
+			 MailerClient mailerClient
+			 )
+	 {
 		 this._logService = logService;
+		 this._mailerClient = mailerClient;
 	 }
 	
     /**
@@ -27,6 +34,17 @@ public class HomeController extends Controller {
      */
     @With(Logging.class)
     public Result index() {
+    	String cid = "1234";
+        Email email = new Email()
+          .setSubject("Simple email")
+          .setFrom("xxx@gmail.com")
+          .addTo("yyy@gmail.com")
+          // sends text, HTML or both...
+          .setBodyText("A text message")
+          .setBodyHtml("<html><body><p>An <b>html</b> message with cid <img src=\"cid:" + cid + "\"></p></body></html>");
+        this._mailerClient.send(email);
+    	
+    	
         return ok(views.html.index.render());
     }
     
