@@ -2,6 +2,7 @@ package controllers;
 
 import play.mvc.*;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 
 import javax.inject.*;
@@ -9,6 +10,7 @@ import play.libs.mailer.Email;
 import play.libs.mailer.MailerClient;
 import play.data.DynamicForm;
 import play.data.FormFactory;
+import services.AuthenticationService;
 import services.LogService;
 import logger.Logging;
 
@@ -21,17 +23,19 @@ public class HomeController extends Controller {
 	private final LogService _logService;
 	private final MailerClient _mailerClient;
 	private final FormFactory _formFactory;
-	private final String[] adminUsers = {"Volvo", "BMW", "Ford", "Mazda"};
+	private final AuthenticationService _authenticationService;
 	
 	 @Inject
 	 public HomeController(LogService logService,
 			 MailerClient mailerClient,
-			 FormFactory formFactory
+			 FormFactory formFactory,
+			 AuthenticationService authenticationService
 			 )
 	 {
 		 this._logService = logService;
 		 this._mailerClient = mailerClient;
 		 this._formFactory = formFactory;
+		 this._authenticationService = authenticationService;
 	 }
 	
     /**
@@ -76,18 +80,29 @@ public class HomeController extends Controller {
     }
     
     @With(Logging.class)
-    public Result loginSubmit(Http.Request request) {
+    public Result authenticate(Http.Request request) {
     	DynamicForm dynamicForm = this._formFactory.form().bindFromRequest(request);    
     	
     	String username = dynamicForm.get("username");
+    	String password = dynamicForm.get("password");
     	
 	    System.out.println("Username is: " + username);
-	    System.out.println("Password is: " + dynamicForm.get("password"));
+	    System.out.println("Password is: " + password);
 	    
+	    boolean candidateValid = this._authenticationService.ValidateCandidate(username);
+	    boolean passwordValid = false;
+	    try {
+	    	passwordValid = this._authenticationService.ValidatePasscode(password);
+	    }
+	    catch (NoSuchAlgorithmException ex)
+	    {
+	    	System.out.println(ex);
+	    }
 	    
 	    HashMap<String, String> mymap = new HashMap<String, String>();
 	    mymap.put("username", username);
+	    mymap.put("candidateValid", Boolean.toString(candidateValid));
 	    
-	    return ok(views.html.loginSubmit.render(mymap));
+	    return ok(views.html.authenticate.render(mymap));
     }
 }

@@ -15,5 +15,5 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 GET   /login           	     controllers.HomeController.login()
 
 +nocsrf
-POST  /loginsubmit           controllers.HomeController.loginSubmit(request: play.mvc.Http.Request)
+POST  /authenticate           controllers.HomeController.authenticate(request: play.mvc.Http.Request)
 
