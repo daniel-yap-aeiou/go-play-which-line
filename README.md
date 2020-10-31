@@ -7,7 +7,7 @@
 ![Snapshot](https://github.com/daniel-yap-aeiou/go-play-which-position/blob/main/img/Boarding%20Pass%20-%20Google%20Chrome%202020-10-22%2017-16-04.gif)
 <br/>
 ![Snapshot](https://github.com/daniel-yap-aeiou/go-play-which-position/blob/main/img/Login%20Page%20-%20Google%20Chrome%202020-10-31%2014-45-03.gif)
-
+<br/>
 
 $ Install Eclipse
 $ Install sbt
