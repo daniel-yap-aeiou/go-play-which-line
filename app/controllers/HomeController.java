@@ -1,9 +1,14 @@
 package controllers;
 
 import play.mvc.*;
+
+import java.util.HashMap;
+
 import javax.inject.*;
 import play.libs.mailer.Email;
 import play.libs.mailer.MailerClient;
+import play.data.DynamicForm;
+import play.data.FormFactory;
 import services.LogService;
 import logger.Logging;
 
@@ -11,19 +16,22 @@ import logger.Logging;
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
  */
-
 public class HomeController extends Controller {
 
 	private final LogService _logService;
 	private final MailerClient _mailerClient;
+	private final FormFactory _formFactory;
+	private final String[] adminUsers = {"Volvo", "BMW", "Ford", "Mazda"};
 	
 	 @Inject
 	 public HomeController(LogService logService,
-			 MailerClient mailerClient
+			 MailerClient mailerClient,
+			 FormFactory formFactory
 			 )
 	 {
 		 this._logService = logService;
 		 this._mailerClient = mailerClient;
+		 this._formFactory = formFactory;
 	 }
 	
     /**
@@ -44,7 +52,6 @@ public class HomeController extends Controller {
           .setBodyHtml("<html><body><p>An <b>html</b> message with cid <img src=\"cid:" + cid + "\"></p></body></html>");
         this._mailerClient.send(email);
     	
-    	
         return ok(views.html.index.render());
     }
     
@@ -61,5 +68,26 @@ public class HomeController extends Controller {
     @With(Logging.class)
     public Result boardingpass() {
     	return ok(views.html.boardingpass.render());
+    }
+    
+    @With(Logging.class)
+    public Result login() {
+    	return ok(views.html.login.render());
+    }
+    
+    @With(Logging.class)
+    public Result loginSubmit(Http.Request request) {
+    	DynamicForm dynamicForm = this._formFactory.form().bindFromRequest(request);    
+    	
+    	String username = dynamicForm.get("username");
+    	
+	    System.out.println("Username is: " + username);
+	    System.out.println("Password is: " + dynamicForm.get("password"));
+	    
+	    
+	    HashMap<String, String> mymap = new HashMap<String, String>();
+	    mymap.put("username", username);
+	    
+	    return ok(views.html.loginSubmit.render(mymap));
     }
 }
