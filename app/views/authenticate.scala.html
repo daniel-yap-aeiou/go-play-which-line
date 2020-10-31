@@ -1,10 +1,14 @@
-@(themap: Map[String, String]) @main("Bikey") {
+@(mymap: Map[String, String]) @main("Bikey") {
 
 
 <div class="w3-container">
 
-	<h1>Welcome @themap.get("username")</h1>
+	<h1>Welcome @mymap.get("username")</h1>
 
-	<p>Candidate validity status: @themap.get("candidateValid")</p>
+	<p>Candidate valid status: @mymap.get("candidateValid")</p>
+	
+	<p>Ticket Number: @mymap.get("ticketNo")</p>
+	
+	<p>Date: @mymap.get("date")</p>
 </div>
 }

@@ -14,6 +14,9 @@ import services.AuthenticationService;
 import services.LogService;
 import logger.Logging;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
@@ -85,9 +88,11 @@ public class HomeController extends Controller {
     	
     	String username = dynamicForm.get("username");
     	String password = dynamicForm.get("password");
+    	String ticketNo = dynamicForm.get("number");
     	
 	    System.out.println("Username is: " + username);
 	    System.out.println("Password is: " + password);
+	    System.out.println("Ticket no. is: " + ticketNo);
 	    
 	    boolean candidateValid = this._authenticationService.ValidateCandidate(username);
 	    boolean passwordValid = false;
@@ -99,9 +104,14 @@ public class HomeController extends Controller {
 	    	System.out.println(ex);
 	    }
 	    
+	    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("EEE, yyyy-MMM-dd HH:mm:ss");
+		LocalDateTime now = java.time.LocalDateTime.now();	
+	    
 	    HashMap<String, String> mymap = new HashMap<String, String>();
 	    mymap.put("username", username);
 	    mymap.put("candidateValid", Boolean.toString(candidateValid));
+	    mymap.put("ticketNo", ticketNo);
+	    mymap.put("date", dtf.format(now));
 	    
 	    return ok(views.html.authenticate.render(mymap));
     }
