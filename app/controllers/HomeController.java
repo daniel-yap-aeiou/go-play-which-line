@@ -6,6 +6,9 @@ import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 
 import javax.inject.*;
+
+import Extensions.DateExtension;
+import Extensions.IntergerExtension;
 import play.libs.mailer.Email;
 import play.libs.mailer.MailerClient;
 import play.data.DynamicForm;
@@ -103,15 +106,14 @@ public class HomeController extends Controller {
 	    {
 	    	System.out.println(ex);
 	    }
-	    
-	    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("EEE, yyyy-MMM-dd HH:mm:ss");
-		LocalDateTime now = java.time.LocalDateTime.now();	
+	    boolean ticketNumberValid = this._authenticationService.ValidateTicketNumber(IntergerExtension.TryParseInteger(ticketNo));
 	    
 	    HashMap<String, String> mymap = new HashMap<String, String>();
 	    mymap.put("username", username);
 	    mymap.put("candidateValid", Boolean.toString(candidateValid));
 	    mymap.put("ticketNo", ticketNo);
-	    mymap.put("date", dtf.format(now));
+	    mymap.put("date", DateExtension.DateInLongFormat());
+	    mymap.put("ticketNumberValid", Boolean.toString(ticketNumberValid));
 	    
 	    return ok(views.html.authenticate.render(mymap));
     }
