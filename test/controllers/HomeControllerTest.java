@@ -58,4 +58,35 @@ public class HomeControllerTest extends WithApplication {
         Result result = route(app, request);
         assertEquals(OK, result.status());
     }
+    
+    @Test
+    public void testlogin() {
+    	Http.RequestBuilder request = new Http.RequestBuilder()
+                .method(GET)
+                .uri("/login");
+
+        Result result = route(app, request);
+        assertEquals(OK, result.status());
+    }
+    
+    @Test
+    public void testauthenticate() {
+    	//Http.RequestBody body = new Http.RequestBody()
+    			//.asFormUrlEncoded("username", new String[] {"danielytf"});
+    	
+    	Http.RequestBuilder request = new Http.RequestBuilder()
+                .method("POST")
+                .uri("/authenticate")
+                .bodyText("username=danielytf");
+    	
+    
+    	  
+    	//request.encoding = "APPLICATION_X_WWW_FORM_URLENCODED";
+    	//request.addParameter("username", "danielytf");
+    	//request.addParameter("password", "rK&B9M?pVGRf+B6zUWM'~7c+`pHs3C3'u,\\\"+(,6)Ms.Fu^(~j)8wb?=");
+    	//request.addParameter("number", "5525");
+    	
+        Result result = route(app, request);
+        assertEquals(OK, result.status());
+    }
 }

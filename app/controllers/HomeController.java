@@ -108,6 +108,8 @@ public class HomeController extends Controller {
 	    }
 	    boolean ticketNumberValid = this._authenticationService.ValidateTicketNumber(IntergerExtension.TryParseInteger(ticketNo));
 	    
+	    ticketNo = this._authenticationService.FinalTicketNumber(ticketNo);
+	    
 	    HashMap<String, String> mymap = new HashMap<String, String>();
 	    mymap.put("username", username);
 	    mymap.put("candidateValid", Boolean.toString(candidateValid));

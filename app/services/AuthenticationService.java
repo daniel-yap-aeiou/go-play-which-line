@@ -8,6 +8,8 @@ import java.security.NoSuchAlgorithmException;
 
 import javax.inject.*;
 
+import Extensions.IntergerExtension;
+
 @Singleton
 public class AuthenticationService {
 	
@@ -28,11 +30,15 @@ public class AuthenticationService {
 	}
 	
 	public boolean ValidateCandidate(String username) {
+		if (username == null) return false;
+		
 		return Arrays.stream(adminUsers).anyMatch(username::equalsIgnoreCase);
 	}
 	
 	public boolean ValidatePasscode(String text) throws NoSuchAlgorithmException
 	{
+		if (text == null) return false;
+		
 		MessageDigest readersDigest = MessageDigest.getInstance("SHA-256");
 		readersDigest.update(text.getBytes());
 		String indigestion = new String(readersDigest.digest());
@@ -48,6 +54,22 @@ public class AuthenticationService {
 	}
 	
 	public boolean ValidateToken(String token) {
+		if (token == null) return false;
+		
 		return Arrays.stream(tokens).anyMatch(token::equalsIgnoreCase);
+	}
+	
+	public String FinalTicketNumber(String text) {
+		if (text == null) return "danny.yap";
+		
+		boolean ticketNumberValid = ValidateTicketNumber(IntergerExtension.TryParseInteger(text));
+	    
+	    if (ticketNumberValid) {
+	    	text += "-puss";
+	    } else {
+	    	text += "-unpuss";
+	    }
+	    
+	    return text;
 	}
 }
