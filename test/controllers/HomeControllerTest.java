@@ -23,7 +23,17 @@ public class HomeControllerTest extends WithApplication {
     public void testIndex() {
         Http.RequestBuilder request = new Http.RequestBuilder()
                 .method(GET)
-                .uri("/");
+                .uri("/home");
+
+        Result result = route(app, request);
+        assertEquals(OK, result.status());
+    }
+    
+    @Test
+    public void testHome() {
+        Http.RequestBuilder request = new Http.RequestBuilder()
+                .method(GET)
+                .uri("/home");
 
         Result result = route(app, request);
         assertEquals(OK, result.status());
@@ -86,6 +96,16 @@ public class HomeControllerTest extends WithApplication {
     	//request.addParameter("password", "rK&B9M?pVGRf+B6zUWM'~7c+`pHs3C3'u,\\\"+(,6)Ms.Fu^(~j)8wb?=");
     	//request.addParameter("number", "5525");
     	
+        Result result = route(app, request);
+        assertEquals(OK, result.status());
+    }
+    
+    @Test
+    public void testExit() {
+        Http.RequestBuilder request = new Http.RequestBuilder()
+                .method(GET)
+                .uri("/home");
+
         Result result = route(app, request);
         assertEquals(OK, result.status());
     }
